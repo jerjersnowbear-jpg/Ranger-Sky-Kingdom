@@ -1,2 +1,0 @@
-# Repository upload notes
-The original browser source, Android source, build workflow, three original JPEG artworks, and regression test were transferred with matching Git object hashes. The two PWA icons and Android launcher icon were replaced with a navy and gold paw emblem at equivalent dimensions because the original PNG files could not be transferred directly. The two non-runtime test screenshots are omitted; the browser test generates them. The original ZIP includes those original files. GitHub Actions and live Pages hosting have not yet been verified.

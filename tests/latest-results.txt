@@ -1,6 +1,10 @@
-PASS: JavaScript syntax (engine, game, service worker)
-PASS: six mission render paths in actual Chromium Canvas compatibility renderer
+RANGER v0.2.0 test results (headless Chromium, local HTTP server)
+PASS: JavaScript syntax (engine, world, ranger, game, service worker)
+PASS: 3D renderer starts on WebGL 2 (SwiftShader software GPU) with no page or console errors
+PASS: all six missions build and render in 3D
 PASS: hidden bridge, grapple activation/landing, ordered puzzle reset/solve, creature rescue, scout stun, three-phase boss, mission ready, mission complete/save
 PASS: normal movement collects relic 1; jump first gap; relic 2; jump second gap; relic 3; beacon activation; complete mission without teleport
-PASS: no browser page errors in compatibility test
-PENDING: native WebGL (blocked by environment), physical phone, Android compile and install, full campaign playthrough, offline service worker verification.
+PASS: compatibility view without WebGL: six missions render, movement suite passes, no errors
+PASS: game also starts when opened straight from disk (file://)
+PASS: optional glTF Ranger model loads and replaces the built-in model (tested with a small sample model)
+PENDING: frame rate on physical phones, Android compile and install, full campaign playthrough by hand, offline service worker check on a hosted copy.

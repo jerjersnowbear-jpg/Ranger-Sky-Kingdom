@@ -2,12 +2,12 @@ plugins { id 'com.android.application' }
 android {
     namespace 'com.snowmastered.ranger'
     compileSdk 35
-    defaultConfig { applicationId 'com.snowmastered.ranger'; minSdk 24; targetSdk 35; versionCode 1; versionName '0.1.0' }
+    defaultConfig { applicationId 'com.snowmastered.ranger'; minSdk 24; targetSdk 35; versionCode 2; versionName '0.2.0' }
     sourceSets { main { assets.srcDirs = [layout.buildDirectory.dir('generated/rangerAssets').get().asFile] } }
     compileOptions { sourceCompatibility JavaVersion.VERSION_17; targetCompatibility JavaVersion.VERSION_17 }
 }
 tasks.register('copyGame', Copy) {
-    from(rootProject.projectDir.parentFile) { include 'index.html', 'engine.js', 'game.js', 'manifest.webmanifest', 'sw.js', 'assets/**' }
+    from(rootProject.projectDir.parentFile) { include 'index.html', 'engine.js', 'world.js', 'ranger.js', 'game.js', 'manifest.webmanifest', 'sw.js', 'assets/**', 'vendor/**' }
     into(layout.buildDirectory.dir('generated/rangerAssets'))
 }
 tasks.named('preBuild').configure { dependsOn tasks.named('copyGame') }
